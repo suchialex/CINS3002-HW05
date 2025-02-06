@@ -3,7 +3,7 @@
 - Use Ctrl + / to toggle commenting
 
 ## The objective of this homework assignment is
-- to write the contents of the file (employees.txt) to a multi-dimensional list
+- to write the contents of the file (employees.csv) to a multi-dimensional list
 - we will lookup employee from this list
 - we will update employee name in this list
 - we will delete employee from this list
@@ -14,11 +14,12 @@
 
 <details>
   <summary>
-    ✅ Copy code from CW04
+    ✅ Copy code from HW04
   </summary>
 
   - Copy main.py, validations.py, functions.py, list_functions.py
   - We won't be using functions.py or list_functions.py, but it will be nice to have all your modules in one place
+  - Download [employees.csv] []
 </details>
 
 <details>
@@ -159,7 +160,7 @@ In the function body
   - Call the display_employees() by passing the employees list (obtained from the file_to_list function) as an argument
 </details>
 
-## In list_functions.py
+## In multilist_functions.py
 
 <details>
   <summary>
@@ -222,7 +223,7 @@ In the function body
 
 </details>
 
-## In list_functions.py
+## In multilist_functions.py
 
 <details>
   <summary>
