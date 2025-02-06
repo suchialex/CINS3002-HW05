@@ -19,7 +19,7 @@
 
   - Copy main.py, validations.py, functions.py, list_functions.py
   - We won't be using functions.py or list_functions.py, but it will be nice to have all your modules in one place
-  - Download [employees.csv] [https://github.com/suchialex/CINS3002-HW05/blob/main/employees.csv]
+  - Download employees.csv from https://github.com/suchialex/CINS3002-HW05/blob/main/employees.csv
 </details>
 
 <details>
