@@ -26,7 +26,14 @@
   <summary>
     ✅ Add a new file
   </summary>
-  Create a new file named multilist_functions.py
+  Create a new file named multilist_functions.py. Copy the function employees_operations() from functions.py. We will the rest of the functions from scratch.
+</details>
+
+<details>
+  <summary>
+    ✅ Download suchi_pretty_print
+  </summary>
+  Download if you need it
 </details>
 
 ## In multilist_functions.py
@@ -42,13 +49,15 @@
 In the function body,
   - First, create an empty list (this list will contain all the employees data)
   - Using the context manager, open the file employees.txt in read mode and store it in a file pointer
+  - (🚩 Use exception handling since file is being opened in read mode)
   - Using this file pointer, start a for loop with a loop variable of your choice (this variable will read each line of the file)
   - Strip off the newline character from the loop variable
-  - Convert the string stored in the loop variable to a list using the delimiter ⏩ 7-20b 
-  🚩 Name this list differently than the empty list above 
+  - Convert the string stored in the loop variable to a list using the delimiter ⏩ 7-20b
+  - (🚩 Name this list differently than the empty list above)
   - Now append this list to the empty list you created above
   - Outside the for loop return the list
   - Using list comprehension rewrite the above statements as concisely as possible ⏩ 7-25
+  
 </details>
 
 ## In main.py
@@ -58,35 +67,48 @@ In the function body,
     ✅ Call the function file_to_list()
   </summary>
 
-   - Comment out the call to employee_operations
-   - Make sure you import the module multilist_functions
-   - Call the function file_to_list()
-   - Store the returned list in a variable
-   - Print the list (you may use suchi_print(), after importing it)
-   - Execute the code to see if the multi-dimensional list is being printed correctly
+   - Inside employee_operations(), comment out the while loop and the function call to list_to_file()
+   - Print the returned list (you may use suchi_print(), after importing it)
+   - 📜 Execute the code
+     - See if the multi-dimensional list is being printed correctly
+     - Clear the contents of the file and ensure an empty list is printed
+     - Misspell the file name and ensure an empty list is printed
 </details>
-
-
-
 
 
 ## In mutlilist_functions.py
 
 <details>
   <summary>
-    ✅ Modify list_to_file
+    display_employees()
+    <details>
+  <summary>
+    ✅ Define display_employees()
   </summary>
-  🚩 IF the list is printed correctly, then only proceed
+  The objective of this function is to display all employees in a tabular format
+  
+  - This function takes one parameter - the employee multi-dimensional list<br>
+  - This function returns nothing, so it is a void function<br>
 
-  - Place the statement(s) that could raise an exception in the try block
-  - Write an except block,
-    - print <code>File not found</code>
-    - return an empty list <code>return []</code> <br> (we are making sure that even though the file doesn't exist, we are returning a list)
-  - Move the rest of the code you have written into the else suite
-  - EXECUTE YOUR CODE by changing the name of the file from employees.txt to em.txt
-  - You should still be able to print an empty list, if yes,
-  - Change the file name back to employees.txt
+  In the function body
+
+  - Start a for loop to go over the multi-dimensional list, choose a name for the loop variable
+  - Using the appropriate indices of the loop variable, print ID, Name, Department and Salary is a formatted tabular fashion
+
 </details>
+
+
+<details>
+  <summary>
+    ✅ Call display_employees()
+  </summary>
+  
+  - You may comment out the code related to lookup_employee() (🚩 NOT the list_to_file() function call)
+  - Call the display_employees() by passing the employees list (obtained from the file_to_list function) as an argument
+</details>
+  </summary>
+</details>
+
 
 
 <details>
@@ -116,7 +138,7 @@ In the function body
 
 </details>
 
-## In main.py
+
 
 <details>
   <summary>
@@ -132,35 +154,8 @@ In the function body
 </details>
 
 
-<details>
-  <summary>
-    ✅ Define display_employees()
-  </summary>
-  The objective of this function is to display all employees in a tabular format
-  
-  - This function takes one parameter - the employee multi-dimensional list<br>
-  - This function returns nothing, so it is a void function<br>
-
-  In the function body
-
-  - Start a for loop to go over the multi-dimensional list, choose a name for the loop variable
-  - Using the appropriate indices of the loop variable, print ID, Name, Department and Salary is a formatted tabular fashion
-
-</details>
-
-## In main.py
 
 
-<details>
-  <summary>
-    ✅ Call display_employees()
-  </summary>
-  
-  - You may comment out the code related to lookup_employee() (🚩 NOT the list_to_file() function call)
-  - Call the display_employees() by passing the employees list (obtained from the file_to_list function) as an argument
-</details>
-
-## In multilist_functions.py
 
 <details>
   <summary>
