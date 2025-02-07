@@ -14,87 +14,75 @@
 
 <details>
   <summary>
-    ✅ Copy code from HW04
+    ✅ Get everything started
   </summary>
 
-  - Copy main.py, validations.py, functions.py, list_functions.py
+  - Copy main.py, validations.py, functions.py, list_functions.py from HW04
   - We won't be using functions.py or list_functions.py, but it will be nice to have all your modules in one place
   - Download employees.csv from https://github.com/suchialex/CINS3002-HW05/blob/main/employees.csv
-</details>
-
-<details>
-  <summary>
-    ✅ Add a new file
-  </summary>
-  Create a new file named multilist_functions.py. Copy the function employees_operations() from functions.py. We will the rest of the functions from scratch.
-</details>
-
-<details>
-  <summary>
-    ✅ Download suchi_pretty_print
-  </summary>
-  Download if you need it
+  - Download suchi_pretty_print.py if you need it https://github.com/suchialex/CINS3002-HW05/blob/main/suchi_pretty_print.py
+  - Create a new file named multilist_functions.py, write an import statement to import the validations module
 </details>
 
 ## In multilist_functions.py
 
 <details>
   <summary>
-    ✅ Define function file_to_list
+    ✅ Define employee_operations()
   </summary>
-  Objective: This function will read the contents of the employees.txt file line by line and split each line into a list using the delimiter ; and  store this list in a list. This multi-dimensional list is returned to the calling function.
 
-  - This function does not accept any parameters
-
-In the function body,
-  - First, create an empty list (this list will contain all the employees data)
-  - Using the context manager, open the file employees.txt in read mode and store it in a file pointer
-  - (🚩 Use exception handling since file is being opened in read mode)
-  - Using this file pointer, start a for loop with a loop variable of your choice (this variable will read each line of the file)
-  - Strip off the newline character from the loop variable
-  - Convert the string stored in the loop variable to a list using the delimiter ⏩ 7-20b
-  - (🚩 Name this list differently than the empty list above)
-  - Now append this list to the empty list you created above
-  - Outside the for loop return the list
-  - Using list comprehension rewrite the above statements as concisely as possible ⏩ 7-25
-  
+  - It is a void function that takes no parameters
+  - Write print statement to print `Employee Management`
 </details>
 
-## In main.py
+
+<details>
+  <summary>
+    ✅ Define function file_to_list
+  </summary>
+  
+  - **Objective**: This function will read the contents of the employees.csv file line by line and split each line into a list using the delimiter ; and  store this list in a list. This multi-dimensional list is returned to the calling function.
+  - This function does not accept any parameters and returns a list
+  - In the function body,
+    - First, create an empty list (this list will contain all the employees data)
+    - Using the context manager, open the file employees.csv in read mode and store it in a file pointer
+      - 🚩 Use exception handling since file is being opened in read mode (in the else clause return an empty list)
+    - Using this file pointer, start a for loop with a loop variable of your choice (this variable will read each line of the file)
+    - Strip off the newline character from the loop variable
+    - Convert the string stored in the loop variable to a list using the delimiter ⏩ 7-20b
+      - 🚩 Name this list differently than the empty list above
+    - Now append this list to the empty list you created above
+    - Outside the for loop return the list
+    - Using list comprehension rewrite the above statements as concisely as possible ⏩ 7-25
+</details>
+
 
 <details>
   <summary>
     ✅ Call the function file_to_list()
   </summary>
 
-   - Inside employee_operations(), comment out the while loop and the function call to list_to_file()
+   - Inside employee_operations(), after the print statement, call the file_to_list()
+   - Store the returned list in a variable
    - Print the returned list (you may use suchi_print(), after importing it)
-   - 📜 Execute the code
+   - 📜 Test your code
      - See if the multi-dimensional list is being printed correctly
      - Clear the contents of the file and ensure an empty list is printed
      - Misspell the file name and ensure an empty list is printed
 </details>
 
 
-## In mutlilist_functions.py
-
 <details>
-  <summary>
-    display_employees()
-    <details>
   <summary>
     ✅ Define display_employees()
   </summary>
-  The objective of this function is to display all employees in a tabular format
   
-  - This function takes one parameter - the employee multi-dimensional list<br>
-  - This function returns nothing, so it is a void function<br>
-
-  In the function body
-
-  - Start a for loop to go over the multi-dimensional list, choose a name for the loop variable
-  - Using the appropriate indices of the loop variable, print ID, Name, Department and Salary is a formatted tabular fashion
-
+  - The objective of this function is to display all employees in a tabular format
+  - This function takes one parameter - the employee multi-dimensional list
+  - This function returns nothing, so it is a void function
+  - In the function body
+    - Start a for loop to go over the multi-dimensional list, choose a name for the loop variable
+    - Using the appropriate indices of the loop variable, print ID, Name, Department and Salary in a formatted tabular fashion
 </details>
 
 
@@ -103,12 +91,41 @@ In the function body,
     ✅ Call display_employees()
   </summary>
   
-  - You may comment out the code related to lookup_employee() (🚩 NOT the list_to_file() function call)
-  - Call the display_employees() by passing the employees list (obtained from the file_to_list function) as an argument
-</details>
-  </summary>
+  - After the call to file_to_list() function, call the display_employees() by passing the employees list (obtained from the file_to_list function) as an argument
 </details>
 
+## In validations.py
+
+<details>
+  <summary>
+    ✅ Define generate_employee_id_multilist()
+  </summary>
+  
+  - The objective of this function is to generate the next employee ID
+  - This function takes one parameter - the employee multi-dimensional list
+  - This function returns a numeric string
+  - In the function body
+    - Check if there are any employees in the list, if not, return a default numeric string, maybe `1001`
+    - Get the last employee from the multidimesional list and store it in a variable (this will be a list)
+    - Get the first element of from the list above, that is the last employee ID and store in a variable
+    - Convert it to an integer and add 1 to it
+    - Return this after converting it to a string
+</details>
+
+
+## In multilist_functions.py
+
+<details>
+  <summary>
+    ✅ Define add_employee()
+  </summary>
+  
+  - The objective of this function is to add a new employee to the multilist
+  - This function takes one parameter - the employee multi-dimensional list
+  - This function returns the modified multi-dimensional list
+  - In the function body
+    - Check 
+</details>
 
 
 <details>
