@@ -23,6 +23,7 @@
   - Download employees.csv from https://github.com/suchialex/CINS3002-HW05/blob/main/employees.csv
   - Download suchi_pretty_print.py if you need it https://github.com/suchialex/CINS3002-HW05/blob/main/suchi_pretty_print.py
   - Create a new file named multilist_functions.py, write an import statement to import the validations module
+  - In **main.py** edit the import statement to import from multilist_functions module
 </details>
 
 ## In multilist_functions.py
