@@ -351,6 +351,7 @@
     - print the menu of options
     - ask the user what option he/she chooses using input statement
     - place the function calls in the correct if-elif-else blocks as per your menu
+    - 🚩 Remember to place add_employee in its own while loop to keep adding new employees until user presses **n** or **N**
   - Place list_to_file() outside the while loop
 
 </details>
