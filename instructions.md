@@ -46,12 +46,12 @@
   - In the function body,
     - First, create an empty list (this list will contain all the employees data)
     - Using the context manager, open the file employees.csv in read mode and store it in a file pointer
-      - 🚩 Use exception handling since file is being opened in read mode (in the else clause return an empty list)
+      - 🚩 Use exception handling since file is being opened in read mode (in the except clause, print `file not found` and return an empty list)
     - Using this file pointer, start a for loop with a loop variable of your choice (this variable will read each line of the file)
-    - Strip off the newline character from the loop variable
-    - Convert the string stored in the loop variable to a list using the delimiter ⏩ 7-20b
-      - 🚩 Name this list differently than the empty list above
-    - Now append this list to the empty list you created above
+      - Remove the newline character from the loop variable
+      - Convert the string stored in the loop variable to a list using the delimiter ⏩ 7-20b
+        - 🚩 Name this list differently than the empty list above
+      - Now append this list to the empty list you created above
     - Outside the for loop return the list
     - Using list comprehension rewrite the above statements as concisely as possible ⏩ 7-25
 </details>
@@ -67,7 +67,7 @@
    - Print the returned list (you may use suchi_print(), after importing it)
    - 📜 Test your code
      - See if the multi-dimensional list is being printed correctly
-     - Clear the contents of the file and ensure an empty list is printed
+     - Clear the contents of the file and ensure an empty list is printed (🚩 replace the contents after testing)
      - Misspell the file name and ensure an empty list is printed
 </details>
 
@@ -91,8 +91,9 @@
     ✅ Call display_employees()
   </summary>
   
-  - After the call to file_to_list() function, call the display_employees() by passing the employees list (obtained from the file_to_list function) as an argument
+  - Inside employee_operations(), after the call to file_to_list() function, call the display_employees() by passing the employees list (obtained from the file_to_list function) as an argument
   - 📜 Test your code - all employee data should be displayed in a tabular format
+  - If code executes correctly, you may comment out this function call
 </details>
 
 ## In validations.py
@@ -135,6 +136,17 @@
     - Return the multidimensional list
 </details>
 
+<details>
+  <summary>
+    ✅ Call add_employee
+  </summary>
+
+  - Inside employee_operations(), after the commented display_employees() function call, call add_employee by passing the employees list returned by file_to_list as an argument
+  - Store the returned list in the same employees list variable (for simplicity)
+  - 📜 Test your code - Add a new employee and see if the employees list is modified correctly
+  - If code works correctly, you may comment out this function call
+</details>
+
 
 <details>
   <summary>
@@ -167,7 +179,7 @@
     ✅ Call the lookup_employee()
   </summary>
 
-  - After the file_to_list() function call, ask the user to provide the employee ID that needs to be looked up using input statement
+  - Inside employee_operations(), after the commented add_employee() function call, ask the user to provide the employee ID that needs to be looked up using input statement
   - Call the lookup_employee() passing TWO arguments, the multi-dimensional list obtained earlier and the employee id from the above step
   - Store the returned values in two variables
   - Check if the first variable is False, if yes, print employee not found
@@ -249,6 +261,7 @@
   </summary>
   
   - Use the same code logic as update_employee_dept and write code to update the salary
+  - 🚩 Modify at the appropriate index position
   - Return the employees list
 </details>
 
