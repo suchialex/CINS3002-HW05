@@ -4,8 +4,9 @@
 
 ## The objective of this homework assignment is
 - to write the contents of the file (employees.csv) to a multi-dimensional list
+- we will add new employees to this list
 - we will lookup employee from this list
-- we will update employee name in this list
+- we will update employee data in this list
 - we will delete employee from this list
 - we will display employees from this list
 - after all these operations are done, we will write this list back to the file
